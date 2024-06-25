@@ -6,11 +6,30 @@ Coding Challenge #14 -->
     <title>Coding Challenge #14</title>
 </head>
 <body>
-    <p>
-    1. interest rate
-    2. loan payment
-    3. investment return
-    </p>
+    <h1>Financial Calculator</h1>
+
+    <div>
+        <input type="number" name="principal" id="principal" placeholder="Principal">
+        <input type="number" name="rate" id="rate" placeholder="Interest Rate">
+        <input type="number" name="time" id="time" placeholder="Time (in months)">
+        <input type="number" name="numberOfPayments" id="numberOfPayments" placeholder="Number of Payments">
+        <br><br>
+        <h3>Interest Rate</h3>
+        <button id="interestCalc">Calculate Interest</button>
+        <br>
+        <p id="interestResult"></p>
+        <br>
+        <h3>Loan Total</h3>
+        <button id="loanCalc">Calculate Loan Payment</button>
+        <br>
+        <p id="loanResult"></p>
+        <br>
+        <h3>Investment Total</h3>
+        <button id="investCalc">Calculate Investment Value </button>
+        <br>
+        <p id="InvestmentResult"></p>
+    </div>
+
     <script type="module" src="main.js"></script>
 </body>
 </html>

@@ -3,6 +3,6 @@
 
 // A = P(1 + r/n)^(nt)
 
-export function investmentReturnCalc(principal, rate, time, compoundPeriods) {
-    return principal * (1 + rate / time ) ^ time
+export function investmentReturnCalc(principal, rate, time, n) {
+    return principal * (1 + rate / n ) ** ( n * time )
 }
