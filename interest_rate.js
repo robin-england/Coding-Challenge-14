@@ -4,5 +4,5 @@
 // Interest = Principal * Rate * Time
 
 export function interestCalc(principal, rate, time){    
-    principal*rate*time
+    return principal*rate*time
 }

@@ -3,4 +3,4 @@
 
 import { interestCalc } from "./interest_rate.js"; 
 import { loanPaymentCalc } from "./loan_payment.js"; 
-
+import { investmentReturnCalc } from "./investment_return.js"; 
