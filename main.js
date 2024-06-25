@@ -8,9 +8,14 @@ import { investmentReturnCalc } from "./investment_return.js";
 addEventListener("DOMContentLoaded", (event) => {           // Ensures DOM has loaded before we listen for buttons
 
     document.getElementById("interestCalc").addEventListener("click", () => {
+        
         const principal = parseFloat(document.getElementById("principal").value)    // Takes values from inputs
         const rate = (parseFloat(document.getElementById("rate").value)/12)         // Converts annual percentage rate to monthly
         const time = parseFloat(document.getElementById("time").value)
+        if (!principal || !rate || !time) {                     // Error Message and cancels function if there are blanks
+            alert("Please fill out each field.")
+            return 
+        }
         const interestTotal = interestCalc(principal, rate, time)
         document.getElementById("interestResult").innerText = `Total Interest: $${interestTotal.toFixed(2)}`    // Displays in html
     })
@@ -18,7 +23,11 @@ addEventListener("DOMContentLoaded", (event) => {           // Ensures DOM has l
     document.getElementById("loanCalc").addEventListener("click", () => {
         const principal = parseFloat(document.getElementById("principal").value)
         const rate = (parseFloat(document.getElementById("rate").value)/12)
-        const n = parseFloat(document.getElementById("numberOfPayments").value)
+        const n = parseFloat(document.getElementById("numberOfPeriods").value)
+        if (!principal || !rate || !n) {                        // Error Message and cancels function if there are blanks
+            alert("Please fill out each field.")
+            return 
+        }
         const loanTotal = loanPaymentCalc(principal, rate, n)
         document.getElementById("loanResult").innerText = `Monthly Loan Payments: $${loanTotal.toFixed(2)}`
     })
@@ -27,9 +36,13 @@ addEventListener("DOMContentLoaded", (event) => {           // Ensures DOM has l
         const principal = parseFloat(document.getElementById("principal").value)
         const rate = (parseFloat(document.getElementById("rate").value)/12)
         const time = parseFloat(document.getElementById("time").value)
-        const n = parseFloat(document.getElementById("numberOfPayments").value)
+        const n = parseFloat(document.getElementById("numberOfPeriods").value)
+        if (!principal || !rate || !time || !n) {                      // Error Message and cancels function if there are blanks
+            alert("Please fill out each field.")
+            return 
+        }
         const investmentTotal = investmentReturnCalc(principal, rate, time, n)
-        document.getElementById("InvestmentResult").innerText = `Future Value of Investment: $${investmentTotal.toFixed(2)}`
+        document.getElementById("investmentResult").innerText = `Future Value of Investment: $${investmentTotal.toFixed(2)}`
     })
 
 }); // dom loaded event close

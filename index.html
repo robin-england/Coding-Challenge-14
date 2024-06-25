@@ -4,30 +4,49 @@ Coding Challenge #14 -->
 <html lang="en">
 <head>
     <title>Coding Challenge #14</title>
+    <style>
+        div{
+        border: darkgreen, 2px, solid;
+        margin: 5px;
+        width: 700px;
+        height: 700px;
+        background-color: rgb(191, 253, 232);
+        color: rgb(5, 75, 5);
+        }
+        button{
+            margin-left: 10px
+        }
+        h3, p{
+            margin-left: 10px;
+            margin-right: 10px
+        }
+    </style>
 </head>
 <body>
-    <h1>Financial Calculator</h1>
 
     <div>
-        <input type="number" name="principal" id="principal" placeholder="Principal">
+        <br>
+        <h1 style="text-align: center">Financial Calculator</h1>
+        <h3 style="text-align: center">Please enter the following:</h3>
+        <input type="number" name="principal" id="principal" placeholder="Principal" style="margin-left: 5px">
         <input type="number" name="rate" id="rate" placeholder="Interest Rate">
         <input type="number" name="time" id="time" placeholder="Time (in months)">
-        <input type="number" name="numberOfPayments" id="numberOfPayments" placeholder="Number of Payments">
+        <input type="number" name="numberOfPeriods" id="numberOfPeriods" placeholder="Number of Periods">
         <br><br>
-        <h3>Interest Rate</h3>
+        <h3>Interest To Be Paid:</h3>
         <button id="interestCalc">Calculate Interest</button>
         <br>
         <p id="interestResult"></p>
         <br>
-        <h3>Loan Total</h3>
+        <h3>Monthly Loan Payment:</h3>
         <button id="loanCalc">Calculate Loan Payment</button>
         <br>
         <p id="loanResult"></p>
         <br>
-        <h3>Investment Total</h3>
+        <h3>Future Value Of Investment</h3>
         <button id="investCalc">Calculate Investment Value </button>
         <br>
-        <p id="InvestmentResult"></p>
+        <p id="investmentResult"></p>
     </div>
 
     <script type="module" src="main.js"></script>
